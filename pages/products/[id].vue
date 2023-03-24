@@ -20,13 +20,17 @@
 
       <p>In this Nuxt lesson, you'll learn how to make page components, which Nuxt then automatically creates routes for. ⭐⭐ Watch the whole course now (without ads) on Net Ninja Pro:</p>
 
-      <p>useRoute() = {{useRoute()  }}</p>
+      <!-- <p>useRoute() = {{useRoute()}}</p> -->
     </div>
  </template>
  
- <script>
- export default {
-    setup () {    
+<script>
+definePageMeta({
+  layout: "items"
+});
+
+export default {
+    setup () {
         return {
          /*
          * 

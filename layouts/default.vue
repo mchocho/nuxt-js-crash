@@ -9,33 +9,29 @@
   <div>
     <header>
       <nav>
-        <NuxtLink>Nuxt Dojo</NuxtLink>  
+        <!-- 
+          <NuxtLink> component
+
+          ref: https://nuxt.com/docs/api/components/nuxt-link#nuxtlink
+
+          NuxtLink determines whether the link is internal or external 
+          and renders it accordingly with available optimizations
+          (prefetching, default attributes, etc).
+
+          It's a replacement for the <a> and <RouterLink> tags and performs
+          faster.
+        -->
+        <NuxtLink to="/">Nuxt Dojo</NuxtLink>  
         <ul>
-          <!-- 
-            <NuxtLink> component
-
-            ref: https://nuxt.com/docs/api/components/nuxt-link#nuxtlink
-
-            NuxtLink determines whether the link is internal or external 
-            and renders it accordingly with available optimizations
-            (prefetching, default attributes, etc).
-
-            It's a replacement for the <a> and <RouterLink> tags and performs
-            faster.
-          -->
-            <li>
-            <NuxtLink to="/">Home</NuxtLink>
-            </li>
-            <li>
-              <NuxtLink to="/about">About</NuxtLink>
-            </li>
-            <li>
-              <NuxtLink to="/products">Products</NuxtLink>
-            </li>
-
-            <li>
-              <a href="/about">About (anchor link for comparison)</a>
-            </li>
+          <li>
+          <NuxtLink to="/">Home</NuxtLink>
+          </li>
+          <li>
+            <NuxtLink to="/about">About</NuxtLink>
+          </li>
+          <li>
+            <NuxtLink to="/products">Products</NuxtLink>
+          </li>
         </ul>
       </nav>
     </header>

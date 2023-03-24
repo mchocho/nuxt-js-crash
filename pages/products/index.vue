@@ -4,8 +4,10 @@
   </div>
 </template>
 
-<script>
-
+<script setup>
+  definePageMeta({
+    layout: "items"
+  });
 </script>
 
 <style>
