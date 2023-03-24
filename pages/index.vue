@@ -2,6 +2,7 @@
   <div>
     <header>
       <nav>
+        <NuxtLink>Nuxt Dojo</NuxtLink>  
         <ul>
           <!-- 
             <NuxtLink> component
@@ -23,6 +24,10 @@
             </li>
             <li>
               <NuxtLink to="/products">Products</NuxtLink>
+            </li>
+
+            <li>
+              <a href="/about">About (anchor link for comparison)</a>
             </li>
         </ul>
       </nav>
