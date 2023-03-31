@@ -4,7 +4,7 @@
     <p class="mt-7 text-6xl">Oooops.</p>
     <p class="mt-7">{{ error.message  }}</p>
 
-    <p class="mt-7">{{error }}</p>
+    <p class="mt-7">{{ error }}</p>
   </div>
 </template>
 
