@@ -16,13 +16,7 @@
 
  <template>
     <div>
-      <p>{{ product.title }}</p>
-      <p>${{ product.price }}</p>
-
-      <hr />
-      <br />
-
-      <p>{{ product.description }}</p>
+      <ProductDetails :product="product" />
     </div>
  </template>
  
