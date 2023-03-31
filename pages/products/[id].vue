@@ -16,32 +16,35 @@
 
  <template>
     <div>
-      <p>Product details for {{id}}</p>
+      <p>{{ product.title }}</p>
+      <p>${{ product.price }}</p>
 
-      <p>In this Nuxt lesson, you'll learn how to make page components, which Nuxt then automatically creates routes for. ⭐⭐ Watch the whole course now (without ads) on Net Ninja Pro:</p>
+      <hr />
+      <br />
 
-      <!-- <p>useRoute() = {{useRoute()}}</p> -->
+      <p>{{ product.description }}</p>
     </div>
  </template>
  
-<script>
-definePageMeta({
-  layout: "items"
-});
+<script setup>
+  /*
+  * 
+  * You can access group/id within your 
+  * component via the $route object
+  * 
+  */
+  const { id } = useRoute().params;
 
-export default {
-    setup () {
-        return {
-         /*
-         * 
-         * You can access group/id within your 
-         * component via the $route object
-         * 
-         */
-         id: useRoute().params.id
-        }
-    }
- }
+  const { data: product } = await useFetch(`https://fakestoreapi.com/products/${id}`);
+
+  if (!product.value) {
+    //
+    throw createError({});
+  }
+
+  definePageMeta({
+    layout: "items"
+  });
  </script>
  
  <style scoped>
