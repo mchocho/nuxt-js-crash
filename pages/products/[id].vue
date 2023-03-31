@@ -35,7 +35,7 @@
   */
   const { id } = useRoute().params;
 
-  const { data: product } = await useFetch(`https://fakestoreapi.com/products/${id}`);
+  const { data: product } = await useFetch(`https://fakestoreapi.com/products/${id}`, { key: id });
 
   if (!product.value) {
     //
