@@ -2,12 +2,12 @@
 // https://tailwindcss.com/docs/guides/nuxtjs#3 - The @nuxt module doesn't seem to build
 
 export default defineNuxtConfig({
-  css: ['~/assets/css/main.css'],
-  postcss: {
-    plugins: {
-      tailwindcss: {},
-      autoprefixer: {},
-    },
+  dev: process.env.NODE_ENV !== 'production',
+  env: {
+    baseURL: process.env.BASE_URL
+  },
+  publicRuntimeConfig: {
+    baseURL: process.env.BASE_URL || 'http://localhost:3000'
   },
   app: {
     head: {
@@ -19,5 +19,12 @@ export default defineNuxtConfig({
         { rel: 'stylesheet', href: 'https://fonts.googleapis.com/icon?family=Material+Icons' }
       ]
     }
+  },
+  css: ['~/assets/css/main.css'],
+  postcss: {
+    plugins: {
+      tailwindcss: {},
+      autoprefixer: {},
+    },
   }
 })
