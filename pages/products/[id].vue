@@ -32,8 +32,21 @@
   const { data: product } = await useFetch(`https://fakestoreapi.com/products/${id}`, { key: id });
 
   if (!product.value) {
-    //
-    throw createError({ statusCode: 404, statusMessage: "Product not found" });
+    /*
+     * createError
+     *
+     * Ref1: https://nuxt.com/docs/getting-started/error-handling#createerror
+     * Ref2: https://nuxt.com/docs/api/utils/create-error#createerror
+     * 
+     * Use this function to create an error object with additional metadata.
+     * The fatal property
+     * 
+     * You can also use showError to force the user to the error screen.
+     * 
+     * useError will return the global Nuxt error that is being handled.
+     */ 
+  
+    throw createError({ statusCode: 404, statusMessage: "Product not found", fatal: true });
   }
 
   definePageMeta({
