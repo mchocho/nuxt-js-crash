@@ -8,5 +8,16 @@ export default defineNuxtConfig({
       tailwindcss: {},
       autoprefixer: {},
     },
+  },
+  app: {
+    head: {
+      title: 'Liquid Store',
+      meta: [
+        { name: 'description', content: 'Everything about Nuxt 3.' }
+      ],
+      link: [
+        { rel: 'stylesheet', href: 'https://fonts.googleapis.com/icon?family=Material+Icons' }
+      ]
+    }
   }
 })
