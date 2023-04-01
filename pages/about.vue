@@ -11,9 +11,7 @@
 </template>
 
 <script setup>
-  const { data } = await useFetch('/api/privateroom');
-
-  
+  const { data } = await useFetch('/api/currency/GBP');
 
 </script>
 
