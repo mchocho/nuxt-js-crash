@@ -11,10 +11,9 @@
 </template>
 
 <script setup>
-  const { data } = await useFetch('/api/privateroom?passphrase=Georgeo', {
-    method: 'post',
-    body: { secretMove: 'dab' }
-  });
+  const { data } = await useFetch('/api/privateroom');
+
+  
 
 </script>
 

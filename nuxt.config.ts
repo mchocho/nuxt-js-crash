@@ -6,8 +6,10 @@ export default defineNuxtConfig({
   env: {
     baseURL: process.env.BASE_URL
   },
-  publicRuntimeConfig: {
-    baseURL: process.env.BASE_URL || 'http://localhost:3000'
+  runtimeConfig: {
+    baseURL: process.env.BASE_URL || 'http://localhost:3000',
+    currencyAPIURL: process.env.CURRENCY_API_URL,
+    currencyAPIKey: process.env.CURRENCY_API_KEY
   },
   app: {
     head: {
