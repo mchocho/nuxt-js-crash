@@ -27,6 +27,27 @@
 
   console.log(products);
 
+  /*
+   * useHead
+   *
+   * ref: https://nuxt.com/docs/api/composables/use-head#usehead
+   * 
+   * 
+   * This function allows you to manage your head 
+   * tags in a programmatic and reactive way.
+   * 
+   * Customise your head tags on the fly.
+   *
+   */
+
+   useHead({
+    title: 'Our Products | Merch',
+    meta: [
+      { name: 'description', content: 'Liquid store merch' }
+    ]
+   });
+
+
 </script>
 
 <style>

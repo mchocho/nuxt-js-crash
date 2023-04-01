@@ -16,6 +16,21 @@
 
  <template>
     <div>
+      <Head>
+        <!--
+          ref: https://nuxt.com/docs/getting-started/seo-meta#components
+
+          To create meta content for a specific page or comonents
+          you can use the Head tag.
+          Nuxt provides:
+          <Title>, <Base>, <NoScript>, <Style>, <Meta>, 
+          <Link>, <Body>, <Html> and <Head>
+          components so you can interact directly with your metadata
+        -->
+        <Title>Liquid Store | {{ product.title }}</Title>
+        <Meta name="description" :content="product.description" />
+      </Head>
+
       <ProductDetails :product="product" />
     </div>
  </template>
@@ -28,7 +43,6 @@
   * 
   */
   const { id } = useRoute().params;
-
   const { data: product } = await useFetch(`https://fakestoreapi.com/products/${id}`, { key: id });
 
   if (!product.value) {
